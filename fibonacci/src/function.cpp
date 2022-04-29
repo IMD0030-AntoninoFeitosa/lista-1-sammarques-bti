@@ -2,8 +2,15 @@
 
 std::vector<unsigned int> fib_below_n( unsigned int n )
 {
-    // TODO: adicione o seu código aqui.
+    std::vector<unsigned int> vec;
 
-    // TODO: Isto é apenas um STUB. Troque o retorno pelo que você julgar correto.
-    return std::vector<unsigned int>{};
+    for ( int i = 0; i<n; i++){
+        if(i==0 || i==1){
+            vec.push_back(1);
+        } else {
+            vec.push_back(vec[i-1] + vec[i-2]);
+        }
+    }
+
+    return vec;
 }

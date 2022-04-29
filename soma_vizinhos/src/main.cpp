@@ -10,7 +10,30 @@ using std::endl;
 
 int main( void )
 {
-    // TODO: Adicione seu código aqui. 
+    
+    int m, n, aux;
+    int count = 0;
+
+    cin >> m;
+    cin >> n;
+
+
+    if (n < 0) {
+        for(int i = n; i<0; i++){
+            count=count+m;
+            m = m - 1;
+        }
+    } else if (n>0) {
+        cout << "Loop 2\n";
+        for(int i = 0; i<n; i++){
+            count=count+m;
+            m = m + 1;
+        }
+    } else {
+        count = m;
+    }
+
+    cout << count << "\n";
 
     return 0;
 }
